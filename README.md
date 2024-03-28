@@ -1,6 +1,6 @@
 # Adding a React App to a Wordpress Page
 
-This is a walkthrough of our process for including a React app on almost any Wordpress page.
+This is a walkthrough of our process for including a React app on almost any Wordpress page. Hosting the app elsewhere and then displaying in an iframe can be convenient, but it's also limiting in many ways. This process puts the app directly into the page's DOM, which unlocks a lot of potential that is lost when using an iframe.
 
 We will assume the use of Vite and the Code Snippets plugin throughout this guide.
 
@@ -28,11 +28,11 @@ The React app must be built in order to be hosted. "npm run build" will run the 
 
 Open Cyberduck or another FTP client. Establish a connection to the remote server where the Wordpress installation is hosted.
 
-Create a new folder in the root Wordpress installation directory (the same place you find wp-content, wp-admin, etc.). Give it the same name as the app. The name doesn't matter except for organization and clarity.
+Find the "ip-builds" folder in the root WordPress installation directory (the same place you find wp-content, wp-admin, etc.). Create a new folder inside that directory. Give it a suitable name (probably the name of the app). The name doesn't matter except for organization and clarity.
 
 **Do not touch any other folders or files in the Wordpress installation directory.**
 
-Navigate into the directory you just created. Copy the build folder you just created into this directory.
+Navigate into the directory you just created. Copy the "dist" folder, created by the build process, into this directory.
 
 Close the connection.
 
